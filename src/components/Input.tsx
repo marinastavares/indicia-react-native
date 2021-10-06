@@ -8,10 +8,21 @@ interface InputInterface {
   errorMessage: string | undefined
   placeholder: string | undefined
   rules: any
+  style: any
+  multiline: boolean | undefined
 }
 
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
-const Input = ({ name, control, errorMessage, rules, placeholder, ...props }: InputInterface) => {
+const Input = ({
+  name,
+  control,
+  errorMessage,
+  rules,
+  placeholder,
+  style,
+  multiline,
+  ...props
+}: InputInterface) => {
   if (!control) {
     return null
   }
@@ -29,6 +40,8 @@ const Input = ({ name, control, errorMessage, rules, placeholder, ...props }: In
             onChangeText={onChange}
             value={value}
             placeholder={placeholder}
+            style={style}
+            multiline={multiline}
             {...props}
           />
         )}

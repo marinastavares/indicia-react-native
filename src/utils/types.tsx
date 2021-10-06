@@ -6,6 +6,13 @@
 export type RootStackParamList = {
   Root: undefined
   NotFound: undefined
+  Complain: undefined
+  Post: undefined
+  CreatePost: undefined
+  Login: undefined
+  SignUp: undefined
+  Home: undefined
+  Dashboard: undefined
   navigation: any
 }
 

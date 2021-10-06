@@ -26,6 +26,7 @@ const styles = StyleSheet.create({
     marginLeft: 64,
     marginBottom: 32,
     fontFamily: 'capriola',
+    paddingTop: 12,
   },
   link: {
     marginTop: 15,
@@ -88,13 +89,13 @@ const Home = ({ navigation }: StackScreenProps<RootStackParamList, 'Home'>) => {
           <Image alt="Logo do Mapa" source={Map} style={styles.image} />
           <Text style={styles.buttonTitle}>Mapa</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity onPress={() => navigation.push('Complain')} style={styles.button}>
           <Image alt="Logo do Megafone" source={Megaphone} style={styles.image} />
           <Text style={styles.buttonTitle}>Denúncia</Text>
         </TouchableOpacity>
       </Stack>
       <Stack direction="row" space={3} mb={3} alignItems="center">
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity onPress={() => navigation.push('Dashboard')} style={styles.button}>
           <Image alt="Logo do Mapa" source={Notes} style={styles.image} />
           <Text style={styles.buttonTitle}>Mural de dicas</Text>
         </TouchableOpacity>

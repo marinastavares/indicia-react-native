@@ -8,6 +8,10 @@ import { createStackNavigator } from '@react-navigation/stack'
 import * as React from 'react'
 import { ColorSchemeName } from 'react-native'
 
+import Post from '../screens/Post'
+import Complain from '../screens/Complain'
+import CreatePost from '../screens/CreatePost'
+import Dashboard from '../screens/Dashboard'
 import NotFoundScreen from '../screens/NotFoundScreen'
 import Login from '../screens/Login'
 import SignUp from '../screens/SignUp'
@@ -21,8 +25,12 @@ const Stack = createStackNavigator<RootStackParamList>()
 
 const RootNavigator = () => {
   return (
-    <Stack.Navigator initialRouteName="Root" screenOptions={{ headerShown: false }}>
+    <Stack.Navigator initialRouteName="Home" screenOptions={{ headerShown: false }}>
       <Stack.Screen name="Home" component={Home} />
+      <Stack.Screen name="CreatePost" component={CreatePost} />
+      <Stack.Screen name="Post" component={Post} />
+      <Stack.Screen name="Dashboard" component={Dashboard} />
+      <Stack.Screen name="Complain" component={Complain} />
       <Stack.Screen name="Root" component={Login} />
       <Stack.Screen name="SignUp" component={SignUp} />
       <Stack.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }} />

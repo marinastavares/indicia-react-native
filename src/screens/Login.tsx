@@ -3,7 +3,7 @@ import { StyleSheet, View } from 'react-native'
 import { Text, Stack, Button, Box, Image } from 'native-base'
 import { useForm, SubmitHandler } from 'react-hook-form'
 
-import Logo from '_assets/images/logo.png'
+import Logo from '../assets/images/logo.png'
 import Input from '../components/Input'
 
 type Inputs = {
